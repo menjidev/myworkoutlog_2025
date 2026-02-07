@@ -1,0 +1,2111 @@
+:root {
+
+/* PALETA CROMÁTICA PRINCIPAL */
+  
+  --color-principal: #222831;    
+  --color-secundario: #393E46;  
+  --color-terciario: #00ADB5;   
+  --color-neutro: #EEEEEE;     
+  --color-acento: #EA7AF4;      
+
+  /* ESCALA GRISES COLOR PRINCIPAL-SECUNDARIO */
+
+  --negro: #000000; 
+  --primario-oscuro-100: #1B1F25;  
+  --secundario: #393E46;  
+  --secundario-claro-200: #5A5F66;
+  --secundario-claro-150: #9e9e9e;  
+  --secundario-claro100: #eceff1;  
+  --claro: #f9fafb;  
+
+  /* ESCALA TURQUESA – COLOR DE ACCIÓN             */
+  
+  --turq-700: #007E86;  
+  --turq-600: #00ADB5; 
+  --turq-400: #33C7CC;  
+  --turq-200: #66D6D9;  
+
+ 
+  /* ESCALA MAGENTA – COLOR DE ACENTO              */
+  
+  --mag-700: #C15FC8;   
+  --mag-600: #EA7AF4;  
+  --mag-400: #F2A8F7;   
+  --mag-200: #F8CFFD;   
+
+
+  /* PALETA SEMÁNTICA (ESTADOS DEL SISTEMA)        */
+ 
+  --sem-exito: #4CAF50;      
+  --sem-error: #F44336;       
+  --sem-warning: #FFC107;     
+  --sem-info: #2196F3;        
+}
+
+/*Estilos Generales*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.main__general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/*Navbar*/
+
+.navbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-principal);
+    
+    
+}
+.navbar__contenedor{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navbar a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-neutro);
+}
+
+.navbar__contenedor-icono svg{
+    width: 30px;
+    height: 30px;
+}
+.navbar__contenedor-texto p{
+    font-size: 14px;
+}
+
+header{
+    display: flex;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid var(--color-neutro);
+    z-index: 1000;    
+}
+
+header div{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+header .header-logo img{
+    height: 25px;
+}
+
+.avatar {
+    width: 3rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Formulario Auth */
+
+.auth-contenedor {
+    min-height: 100vh;
+    padding: 4rem 1.75rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: var(--font-main);
+    color: var(--color-text-main);
+}
+
+.auth-contenedor__logo {
+    margin-bottom: 3rem;
+}
+
+/* Círculo grande con el logo dentro */
+
+.auth-contenedor__logo-circulo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.auth-contenedor__logo-imagen {
+    max-width: 70%;
+    max-height: 70%;
+    display: flex;
+}
+
+/* Tarjeta del formulario */
+
+.auth-card {
+    display: flex;
+    width: 80%;
+    max-width: 380px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid var(--color-terciario);
+}
+
+/*  Formulario  */
+
+.auth-formulario {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    justify-content: center;
+    width: 100%;
+    gap: 1.25rem;
+}
+
+.auth-form__label-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.4rem;
+}
+
+.auth-form__label {
+    font-size: 0.9rem;
+    width: 100%;
+    color: var(--color-principal);
+}
+
+.auth-form__input {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    font-size: 0.95rem;
+    outline: none;
+
+}
+
+/* botón de Entrar */
+
+.auth-form__button {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--color-terciario);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+   
+}
+
+/*  Enlace de registro  */
+
+.auth-contenedor__registro {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-principal);
+}
+
+.auth-contenedor__registro-link {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Dashboard */
+
+.dashboard__titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.dashboard__titulo__h1{
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: var(--color-principal);
+}
+
+.dashboard__titulo__h1--terciario{
+    color: var(--color-terciario);
+}
+
+/* Contenedor dashboard Resumenenes */
+
+.dashboard-resumen {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+}
+
+.dashboard-resumen__contenedor-titulo {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    justify-content: center;
+    padding: 1.5rem 1.5rem 1.25rem;
+    gap: 10px;
+}
+
+.dashboard-resumen__contenedor-titulo__h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: var(--color-text-main);
+}
+
+/* Items dentro de la card */
+
+.dashboard-resumen__contenedor-cards {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dashboard-resumen__card {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--secundario-claro100);
+    background-color: var(--claro);
+    width: 100%;
+    
+}
+
+.dashboard-resumen__card__contenedor-icono {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.dashboard-resumen__card__contenedor-icono__icono {
+    width: 24px;
+    height: 24px;
+    color: var(--color-principal);
+    font-weight: 600;
+    
+}
+
+.dashboard-resumen__card__contenedor-icono__titulo{
+    color: var(--color-principal);
+}
+
+/* valor principal (número o texto) */
+
+.dashboard-resumen__valor-variable {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-principal);
+}
+
+/* Dashboard - Ver más */
+
+.dashboard-resumen__contenedor-ver-mas{
+    display: flex;
+    justify-content: right;
+}
+
+.dashboard-resumen__contenedor-ver-mas__link{
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+/* Últimos entrenamientos */
+
+.dashboard-entrenamientos {
+    width: 100%;
+    max-width: 960px;
+    padding: 1.5rem 1.5rem 1.25rem;
+}
+
+.dashboard-entrenamientos__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-entrenamientos__titulo {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.dashboard-entrenamientos__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dashboard-entrenamientos__lista__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0.9rem;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    border: 1px solid #eceff1;
+}
+
+.dashboard-entrenamientos__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.dashboard-entrenamientos__nombre {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-principal);
+}
+
+.dashboard-entrenamientos__fecha {
+    font-size: 0.8rem;
+    color: var(--color-secundario);
+}
+
+/* Botón "Ver más" */
+
+.dashboard-entrenamientos__button {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 2px;
+    border: 1px solid var(--color-terciario);
+    color: var(--color-terciario);
+    background-color: var(--secundario-claro);
+    text-decoration: none;
+}
+
+/* Entrenamientos */
+
+.contenedor-entrenamientos__icono-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    gap: 15px;
+    
+}
+
+.contenedor-entrenamientos__icono{
+    height: 60px;
+    width: 60px;
+    transform: rotate(45deg);
+    color: var(--secundario-claro-200);
+}
+
+.contenedor-entrenamientos__contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    font-size: 24px;
+    color: var(--secundario-claro-200);
+}
+
+/* Formulario crear entrenamiento */
+
+.formulario-crear-ent{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    max-width: 910px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid var(--color-terciario);
+    padding: 1.3rem 1.5rem 2rem;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+
+.formulario-crear-ent__input{
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.formulario-crear-ent__button{
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--color-terciario);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.formulario-crear-ent__button a{
+    text-decoration: none;
+    color: var(--claro);
+}
+
+.dashboard-entrenamientos--vista-entrenamientos{
+    margin-top: 25px;
+}
+
+/* Ejercicios */
+
+/* CONTENEDOR GENERAL DE LA PANTALLA DE EJERCICIOS */
+
+.ejercicios {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 960px;
+}
+
+/* FORMULARIO DE BUSCADOR */
+
+.ejercicios__buscador {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+
+.ejercicios__search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 0.75rem 0 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-neutro);
+    background:  var(--claro);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.ejercicios__search-icono-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ejercicios__search-icono {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    margin-left: 8px;
+    color: #e2e2e2;
+}
+
+
+.ejercicios__botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ejercicios__boton {
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.ejercicios__boton--turquesa {
+    background: var(--color-terciario);
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.ejercicios__boton--turquesa-borde {
+    background: #ffffff;
+    color: var(--color-terciario);
+    border: 1px solid var(--color-terciario);
+}
+
+/* LISTA DE EJERCICIOS */
+
+.ejercicios__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Tarjeta de ejercicio */
+
+.ejercicios__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    background: #ffffff;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.ejercicios__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.15rem;
+    max-width: 80%;
+}
+
+.ejercicios__nombre {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.ejercicios__grupo {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.ejercicios__boton--add {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-terciario);
+    background: #ffffff;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+/* Entrenamientos ver.php */
+
+.entrenamiento {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 960px;
+  width: 90%;
+}
+
+/* Cabecera del entrenamiento */
+
+.entrenamiento__cabecera {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-neutro);
+}
+
+.entrenamiento__cabecera-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.entrenamiento__titulo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.entrenamiento__titulo-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font: inherit;          
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.entrenamiento__fecha {
+  font-size: 13px;
+  color: var(--secundario-claro-150);
+}
+.entrenamiento__notas-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.entrenamiento__notas {
+  font-size: 13px;
+  color: var(--secundario-claro-150);
+}
+
+.entrenamiento__notas-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--secundario-claro-150);
+  padding: 0;
+  margin: 0;
+  resize: vertical;
+  outline: none;
+}
+
+.entrenamiento__cabecera-guardar {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-terciario);
+  background-color: var(--color-terciario);
+  color: #ffffff;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Tarjeta del ejercicio */
+
+.tarjeta-ejercicio {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid var(--color-terciario);
+  border-radius: 3px;
+  padding: 12px 12px 14px;
+}
+
+.tarjeta-ejercicio__titulo {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Tabla de series */
+
+.tabla-series {
+  width: 100%;
+  margin-bottom: 6px;
+  border-collapse: collapse;
+  table-layout: fixed; 
+}
+
+.tabla-series__fila--encabezado .tabla-series__celda {
+  font-weight: 600;
+  color: var(--color-terciario);
+  font-size: 12px;
+}
+
+
+.tabla-series__celda {
+  padding: 4px 0;
+  text-align: center;
+  font-size: 12px;
+  border: none;
+}
+
+.tabla-series__input,
+.tabla-series__select {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  font-size: 12px;
+  text-align: center;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  color: var(--secundario-claro-150);
+}
+
+.tabla-series__input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+.tabla-series__input[type="number"]::-webkit-outer-spin-button,
+.tabla-series__input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tabla-series__cuerpo .tabla-series__celda {
+  color: var(--secundario-claro-150);
+}
+
+.tabla-series__fila + .tabla-series__fila .tabla-series__celda {
+  border-top: 1px solid var(--color-neutro);
+}
+
+.tabla-series__celda--link a {
+  color: var(--color-acento)!important;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tabla-series__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last: center; 
+}
+
+.tarjeta-ejercicio__recomendacion {
+  margin: 4px 0 10px;
+  font-size: 11px;
+  color: var(--color-acento);
+}
+
+.tarjeta-ejercicio__acciones-series {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.centrar__boton{
+    display: flex;
+    justify-content: center;
+}
+
+.boton-añadir-serie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.tarjeta-ejercicio__boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  width: 33%;
+}
+
+.boton--primario {
+  background-color: var(--color-terciario);
+  color: #ffffff;
+}
+
+.boton--secundario {
+  background-color: var(--color-neutro);
+  color: var(--sem-error);
+}
+
+.acciones-entrenamiento {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.acciones-entrenamiento__boton {
+  display: flex;
+    align-items: center;
+    gap: 5%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.acciones-entrenamiento__texto{
+    font-size: 14px;
+}
+
+.acciones-entrenamiento__boton--primario {
+  background-color: var(--color-terciario);
+  color: #ffffff;
+}
+
+.acciones-entrenamiento__boton--peligro {
+  background-color: var(--color-neutro);
+  color: var(--sem-error);
+}
+
+.contenedor__volver-atras__link{
+    color: var(--color-acento);
+    font-size: 13px;
+}
+
+.contenedor__volver-atras__link svg{
+    height: 13px!important;
+    width: 13px!important;
+}
+
+/* Métricas */
+
+/* CONTENEDOR GENERAL DE MÉTRICAS */
+.metricas {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    padding: 1rem;
+}
+
+/* GRID SUPERIOR DE TARJETAS */
+.metricas__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metricas-resumen__filtros {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+}
+
+.metricas-resumen__etiqueta {
+  font-weight: 600;
+  color: var(--color-terciario);
+}
+
+.metricas-resumen__filtros-form {
+  display: flex;
+  align-items: center;
+}
+
+.metricas-resumen__select-contenedor {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.metricas-resumen__select {
+  border-radius: 4px;
+  border: 1px solid var(--color-terciario);
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.25rem 1.8rem 0.25rem 0.7rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.metricas-resumen__select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.metricas-resumen__select-icono {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricas-resumen__select-icono svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+  color: #6b7280;
+}
+
+
+/* ========== TARJETA RESUMEN ========== */
+
+.metricas-resumen__cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.metricas-resumen__titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.metricas-resumen__etiqueta {
+  font-weight: 500;
+  color: var(--color-terciario);
+}
+
+
+
+.metricas-resumen__filtro--activo {
+  background-color: var(--color-terciario, #111827);
+  color: #ffffff;
+}
+
+.metricas-resumen__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+
+
+.metricas-resumen__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricas-resumen__valor {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-terciario, #111827);
+}
+
+.metricas-resumen__texto {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/*  TARJETA TOP FUERZA */
+
+.metricas__tarjeta {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid var(--color-neutro, #e5e7eb);
+    padding: 0.85rem 1rem;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.metricas-top-fuerza__titulo,
+.metricas-top-frecuencia__titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.metricas-top-fuerza__mensaje,
+.metricas-top-frecuencia__mensaje {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.metricas-top-fuerza__mensaje--hint,
+.metricas-top-frecuencia__mensaje--hint {
+  color: #9ca3af;
+}
+
+.metricas-top-fuerza__ejercicio {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--color-terciario);
+}
+
+.metricas-top-fuerza__dato {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--secundario-claro-200);
+  
+}
+
+.metricas-resumen__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem; 
+}
+
+
+.metricas-resumen__item {
+  flex: 1 1 calc(50% - 0.75rem);  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background-color: #f9fafb;
+}
+
+@media (min-width: 768px) {
+  .metricas-resumen__item {
+    flex: 1 1 calc(33.333% - 0.75rem);
+  }
+}
+
+.metricas-resumen__valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-terciario, #111827);
+}
+
+.metricas-resumen__texto {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.contenedor__metricas-top-fuerza__select{
+    position: relative;
+}
+
+.metricas-top-fuerza__contenedor__dato{
+    display: flex;
+    font-size: 0.85rem;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.metricas-top-fuerza__select{
+    border-radius: 4px;
+    border: 1px solid var(--color-terciario);
+    background-color: #ffffff;
+    color: var(--secundario-claro-200);
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding: 0.25rem 1.8rem 0.25rem 0.7rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.color_terciario{
+  color: var(--color-terciario)!important;
+}
+
+.metricas-top-fuerza__select-icono{
+    position: absolute;
+    right: 7px;
+    top: 5px;
+}
+.metricas-top-fuerza__select-icono svg{
+    width: 14px;
+    height: 14px;
+    stroke-width: 2;
+    color: #6b7280;
+}
+
+/* ========== TARJETA TOP FRECUENCIA ========== */
+
+.metricas-top-frecuencia__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.metricas-top-frecuencia__cabecera {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.metricas-top-frecuencia__celda {
+  padding: 0.25rem 0;
+}
+
+.metricas-top-frecuencia__celda--cabecera {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.metricas-top-frecuencia__celda--nombre {
+  text-align: left;
+  color: var(--color-terciario);
+}
+
+.metricas-top-frecuencia__celda--contador {
+  text-align: right;
+  color: var(--secundario-claro-200);
+}
+
+/* ========== TARJETA CALENDARIO ========== */
+
+.metricas-calendario {
+  margin-bottom: 1rem;
+}
+
+.metricas-calendario__cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.metricas-calendario__titulos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.metricas-calendario__titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.metricas-calendario__subtitulo {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.metricas-calendario__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.metricas-calendario__campo {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+.metricas-calendario__label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.metricas-calendario__input {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+.metricas-calendario__boton {
+  border-radius: 999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  background-color: var(--color-terciario, #111827);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (hover:hover) {
+  .metricas-calendario__boton:hover {
+    opacity: 0.9;
+  }
+}
+
+.metricas-calendario__contenido {
+  margin-top: 0.75rem;
+}
+
+/* TABLA DEL CALENDARIO */
+
+.metricas-calendario__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.8rem;
+}
+
+.metricas-calendario__cabecera-tabla {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.metricas-calendario__dia-semana {
+  text-align: center;
+  padding: 0.25rem 0;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.metricas-calendario__dia {
+  border: 1px solid #f3f4f6;
+  vertical-align: top;
+  height: 64px;
+}
+
+.metricas-calendario__dia--vacio {
+  background-color: #f9fafb;
+}
+
+.metricas-calendario__dia--entrenamiento {
+  border: 2px solid var(--color-terciario);
+  font-weight: 600;
+}
+
+.metricas-calendario__dia--hoy {
+  border-color: var(--color-terciario, #111827);
+}
+
+.metricas-calendario__dia-contenido {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: space-between;
+  padding: 0.25rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.metricas-calendario__dia-numero {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;  
+}
+
+.metricas-calendario__lista-entrenos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;          
+}
+
+.metricas-calendario__entreno {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.metricas-calendario__input--mes {
+  width: 100%;
+  max-width: 180px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;    
+  color: var(--color-terciario);          
+  font-size: 0.85rem;
+  font-family: inherit;
+  text-align: left;
+}
+
+/* Ajuste responsive para la cabecera del calendario en pantallas grandes */
+@media (min-width: 768px) {
+  .metricas-calendario__cabecera {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+
+/* Perfil */
+
+/* Contenedor general de la pantalla de perfil */
+.perfil {
+  padding: 1.5rem 1.25rem 5rem; /* margen inferior por la navbar fija */
+  width: 90%;
+  max-width: 960px;
+}
+
+/* Mensajes de alerta */
+.perfil__alerta {
+  font-size: 0.85rem;
+  padding: 0.65rem 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.perfil__alerta--ok {
+  background-color: #e6f7f4;
+  color: #13695f;
+}
+
+.perfil__alerta--error {
+  background-color: #fdecea;
+  color: #b3261e;
+}
+
+/* Tarjeta principal del formulario */
+.perfil__form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  
+}
+
+/* Cabecera: avatar + acciones */
+.perfil__cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.25rem;
+}
+
+/* Avatar circular */
+.perfil__avatar-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.perfil__avatar-imagen,
+.perfil__avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil__avatar-imagen {
+  object-fit: cover; 
+}
+
+.perfil__avatar-placeholder i {
+  width: 64px;
+  height: 64px;
+  stroke-width: 1.8;
+}
+
+.perfil__avatar-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.perfil__avatar-boton {
+  font-size: 0.95rem;
+  color: var(--color-terciario);
+  cursor: pointer;
+}
+
+.perfil__avatar-input {
+  display: none; 
+}
+
+.perfil__avatar-eliminar {
+  font-size: 0.8rem;
+  color: #b3261e;
+  text-decoration: none;
+}
+
+.perfil__avatar-eliminar:hover {
+  text-decoration: underline;
+}
+
+.perfil__bloque {
+  margin-top: 1.5rem;
+}
+
+.perfil__titulo-seccion {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-principal);
+}
+
+.perfil__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.perfil__label {
+  font-size: 0.9rem;
+  color: var(--color-principal);
+}
+
+.perfil__input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0 0.75rem;
+}
+
+.perfil__acciones {
+    margin-top: 1rem;
+    gap: 30px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+
+.perfil__boton-guardar {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-terciario);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.perfil__boton-guardar:active {
+  transform: scale(0.98);
+}
+
+.perfil-ejercicios {
+  margin-top: 1.5rem;
+}
+
+.perfil-ejercicios__mensaje {
+  font-size: 0.9rem;
+  color: var(--secundario-claro-200);
+  margin-top: 0.5rem;
+}
+
+.perfil-ejercicios__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.perfil-ejercicios__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--secundario-claro100);
+  background-color: #ffffff;
+}
+
+.perfil-ejercicios__texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.perfil-ejercicios__nombre {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-principal);
+}
+
+.perfil-ejercicios__grupo {
+  font-size: 0.8rem;
+  color: var(--secundario-claro-200);
+}
+
+.perfil-ejercicios__boton-eliminar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e53935;
+  text-decoration: none;
+}
+
+.perfil-ejercicios__boton-eliminar i {
+  width: 22px;
+  height: 22px;
+}
+
+
+.perfil__boton-logout {
+    justify-content: center;
+    display: flex;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    background-color: var(--color-terciario);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ============ NUEVO EJERCICIO ============ */
+
+.nuevo-ejercicio {
+  padding: 1.5rem 1.25rem 5rem; /* margen inferior por la navbar fija */
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.nuevo-ejercicio__card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem 1.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.nuevo-ejercicio__cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.nuevo-ejercicio__titulo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-principal);
+}
+
+.nuevo-ejercicio__volver {
+  font-size: 0.85rem;
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.nuevo-ejercicio__volver:hover {
+  text-decoration: underline;
+}
+
+/* Alertas */
+
+.nuevo-ejercicio__alerta {
+  font-size: 0.85rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.9rem;
+}
+
+.nuevo-ejercicio__alerta--error {
+  background-color: #fdecea;
+  color: #b3261e;
+}
+
+/* Formulario */
+
+.nuevo-ejercicio__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.nuevo-ejercicio__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nuevo-ejercicio__label {
+  font-size: 0.9rem;
+  color: var(--color-principal);
+}
+
+.nuevo-ejercicio__label-ayuda {
+  font-size: 0.8rem;
+  color: var(--secundario-claro-200);
+  margin-left: 0.25rem;
+}
+
+.nuevo-ejercicio__input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  font-size: 0.95rem;
+  outline: none;
+  padding: 0 0.75rem;
+}
+
+/* Acciones */
+
+.nuevo-ejercicio__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.nuevo-ejercicio__boton {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nuevo-ejercicio__boton--primario {
+  border: none;
+  background-color: var(--color-terciario);
+  color: #ffffff;
+}
+
+.nuevo-ejercicio__boton--secundario {
+  border: 1px solid var(--secundario-claro100);
+  background-color: #ffffff;
+  color: var(--color-principal);
+}
+
+.nuevo-ejercicio__select  {
+  color: var(--secundario-claro-200);
+}
+
+/* Modal */
+
+.modal-ejercicio {
+  position: fixed;
+  inset: 0;
+  display: none;              /* oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-ejercicio--visible {
+  display: flex;              /* se muestra al añadir la clase */
+}
+
+.modal-ejercicio__contenido {
+  width: 100%;
+  max-width: 680px;
+  max-height: calc(100vh - 2.5rem);  
+  padding: 0 1rem;
+  overflow-y: auto;   
+}
+
+/* Evitar scroll cuando hay modal abierto */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Botón (Ver más) */
+.tabla-series__link-boton {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--color-acento);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+
+/* Bloque general del contenido de notas dentro del modal */
+.notas-serie {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+}
+
+.notas-serie__card {
+  width: 100%;
+  max-width: 520px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  
+}
+
+/* Cabecera */
+.notas-serie__cabecera {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.notas-serie__titulo {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-terciario);
+  margin: 0 0 0.35rem;
+}
+
+.notas-serie__descripcion {
+  font-size: 0.9rem;
+  color: var(--secundario-claro-150);
+  margin: 0;
+}
+
+/* Campo de texto */
+.notas-serie__campo {
+  margin-top: 1rem;
+}
+
+.notas-serie__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-principal);
+  margin-bottom: 0.35rem;
+}
+
+.notas-serie__textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: vertical;
+  border-radius: 0.75rem;
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.notas-serie__textarea:focus {
+  border-color: var(--color-terciario);
+  box-shadow: 0 0 0 1px rgba(0, 173, 181, 0.25);
+}
+
+/* Acciones */
+.notas-serie__acciones {
+  display: flex;
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+}
+
+/* Botones del modal de notas */
+.notas-serie__boton {
+  border-radius: 8px;
+  padding: 0.55rem 1.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    transform 0.08s ease;
+}
+
+/* Primario = guardar */
+.notas-serie__boton--primario {
+  background-color: var(--color-terciario);
+  color: #ffffff;
+}
+
+
+/* Secundario = cancelar */
+.notas-serie__boton--secundario {
+  background-color: var(--color-neutro);
+  color: var(--sem-error);
+}
+
+/* Texto plano de notas (modal ver-notas) */
+.notas-serie__texto {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-principal);
+  white-space: pre-wrap;
+}
+
+.entrenamiento-resumen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 1rem 2rem;
+}
+
+.entrenamiento-resumen__card {
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0px;
+}
+
+/* Bloque general (cabecera + cada ejercicio) */
+.entrenamiento-resumen__bloque {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.entrenamiento-resumen__bloque--principal {
+  border-top: none;
+  padding-top: 0;
+}
+
+/* Nombre de ejercicio */
+.entrenamiento-resumen__nombre-ejercicio {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--color-principal);
+  margin: 0 0 0.4rem;
+}
+
+/* Lista de series */
+.entrenamiento-resumen__lista-series {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.entrenamiento-resumen__serie {
+  padding: 0.45rem 0.5rem;
+  border-radius: 6px;
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+}
+
+.entrenamiento-resumen__serie p {
+  margin: 0.1rem 0;
+  font-size: 0.88rem;
+}
+
+/* Nota de serie */
+.entrenamiento-resumen__nota-serie {
+  color: var(--color-principal);
+  font-style: italic;
+  border-left: 3px solid var(--color-terciario);
+  padding-left: 0.5rem;
+}
+
+/* Mensajes informativos */
+.entrenamiento-resumen__sin-series {
+  font-size: 0.88rem;
+  color: var(--secundario-claro-150);
+}
+
+/* Acciones (botón volver) */
+.entrenamiento-resumen__acciones {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contenedor__volver-atras--ejercicios{
+  margin-bottom: 15px;
+}
+
+/* Selects dentro de la tabla de usuarios/series */
+.tabla-series__select--estado {
+ -webkit-appearance: initial;
+  -moz-appearance: initial;
+  appearance: auto;
+}
+
+.tabla-series__select--rol {
+ -webkit-appearance: initial;
+  -moz-appearance: initial;
+  appearance: auto;
+}
+
+.tabla-series__celda--email{
+  overflow: hidden;
+}
+
+.small{
+ font-size: 0.75rem;
+ color: var(--secundario-claro-150);
+ outline: none;
+}
+
+.boton-pequeño{
+  padding: 2px;
+  border-radius: 4px;
+  border: none;
+}
+
+.tabla-series--gestionar-usuarios{
+  width: 90%;
+}
+
+.buscador-gestion-ejercicios{
+  position: relative;
+}
+
+.icono-gestion{
+  position: absolute;
+}
+
+.sidebar {
+  display: none; /* oculto en mobile */
+}
+
+@media (min-width: 800px) {
+
+  /* El body pasa a ser un grid 2 columnas */
+  .layout-app {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-rows: 100vh;
+    grid-template-areas: "sidebar main";
+    overflow: hidden; /* scroll sólo en el main */
+    background-color: var(--color-principal);
+  }
+
+  /* Ocultamos header y navbar móviles */
+  header,
+  .navbar {
+    display: none;
+  }
+
+  /* Sidebar columna izquierda */
+  .sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-principal);
+    color: var(--color-neutro);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .sidebar__avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .sidebar__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .avatar{
+    width: 8rem;
+  }
+
+  .sidebar__link {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    color: var(--color-neutro);
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .sidebar__link:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-neutro);
+  }
+
+  .sidebar__footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar__logout {
+    text-align: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--color-neutro);
+    opacity: 0.8;
+  }
+
+  .sidebar__logout:hover {
+    opacity: 1;
+  }
+
+  .sidebar__logo{
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar__logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+  }
+.formulario-crear-ent{
+  border: 0;
+}
+
+.main__general {
+    grid-area: main;
+    display: flex;             
+    flex-direction: column;
+    align-items: center;        
+    justify-content: flex-start;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    overflow-y: auto;          
+    background-color: var(--claro);
+  }
+}

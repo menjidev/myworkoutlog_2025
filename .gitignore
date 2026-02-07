@@ -1,0 +1,21 @@
+# Config de editor
+.vscode/
+*.code-workspace
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporales
+tmp/
+*.tmp
+
+# Dependencias PHP (por si acaso)
+vendor/
+
+# Variables de entorno (para el futuro)
+.env
+.env.local
