@@ -15,7 +15,7 @@ MyWorkoutLog que incorpore un sistema CRUD. Esta aplicación estará orientada a
 
 ## Demo
 
-<img src="public/img/screnshots/iPhone-14-(iOS-16)-localhost-oyefu4fyswtwc3.gif" alt="Demo">
+<img src="public/img/screnshots/iPhone-14-(iOS-16)-localhost-oyefu4fyswtwc3.gif" width="250" alt="Demo">
 
 ## Requisitos
 
@@ -79,6 +79,7 @@ Para visualizar la aplicación en un teléfono móvil conectado a la misma red l
    - Ejemplo: `http://192.168.1.165/myworkoutlog`
 
 Si la configuración es correcta, MyWorkoutLog se mostrará en el navegador del teléfono igual que en el ordenador.
+
 
 
 
