@@ -117,7 +117,9 @@ Si solo quieres probar la aplicación, puedes usar un usuario de prueba que ya i
 - Correo: `maria@myworkoutlog.com`
 - Contraseña: `proyectodedaw`
 
+## Documentación
 
+- [Memoria del proyecto (PDF)](public/docs/DAW_Memoria_CristianMenjibar.pdf)
 
 
 
