@@ -88,6 +88,36 @@ Para visualizar la aplicación en un teléfono móvil conectado a la misma red l
 
 Si la configuración es correcta, MyWorkoutLog se mostrará en el navegador del teléfono igual que en el ordenador.
 
+## Manual de usuario (rápido)
+
+### Acceso a la aplicación
+Al acceder a la aplicación verás un formulario de inicio de sesión.
+
+- Si ya tienes una cuenta, inicia sesión con tu correo y contraseña.
+- Si no tienes cuenta, pulsa en **“¿No tienes cuenta? Regístrate”**, debajo del formulario, y completa el registro.
+
+### Activación de cuentas
+Solo es posible acceder a la aplicación si la cuenta está en **estado activo** dentro del sistema. Puedes activarla de dos formas:
+
+1. **Desde phpMyAdmin**
+   - Accede a `http://localhost/phpmyadmin`
+   - Entra en la base de datos del proyecto
+   - Abre la tabla de usuarios y cambia el campo de estado a **“activo”** para el usuario correspondiente.
+
+2. **Desde la cuenta de administrador**
+   - Inicia sesión con el usuario administrador y activa al usuario desde el panel del sistema.
+
+Datos del administrador:
+- Correo: `cristian@myworkoutlog.com`
+- Contraseña: `proyectodedaw`
+
+### Usuario de prueba (recomendado)
+Si solo quieres probar la aplicación, puedes usar un usuario de prueba que ya incluye entrenamientos y sesiones predefinidas:
+
+- Correo: `maria@myworkoutlog.com`
+- Contraseña: `proyectodedaw`
+
+
 
 
 
