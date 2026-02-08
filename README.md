@@ -6,9 +6,11 @@ MyWorkoutLog es una aplicación web que permite a los usuarios registrarse para 
 </p>
 El objetivo principal de este proyecto es desarrollar una aplicación web completa denominada 
 MyWorkoutLog que incorpore un sistema CRUD. Esta aplicación estará orientada al seguimiento y análisis del rendimiento en entrenamientos de fuerza. La aplicación permitirá a los usuarios registrar sus entrenamientos de forma personalizada, gestionar los datos de cada sesión (peso, repeticiones y series) y consultar métricas de progreso que reflejen su evolución a lo largo del tiempo. 
-<video controls width="700">
-  <source src="public/img/screnshots/iPhone-14-(iOS-16)-localhost-oyefu4fyswtwc3.webm" type="video/mp4">
-</video>
+<p align="center">
+  <a href="https://youtu.be/83oGZXK-xz0">
+    <img src="public/img/screnshots/captura_video presentación.png" alt="Ver demo" width="700">
+  </a>
+</p>
 ## Requisitos
 
 - XAMPP (Apache y MySQL/MariaDB)
@@ -71,6 +73,7 @@ Para visualizar la aplicación en un teléfono móvil conectado a la misma red l
    - Ejemplo: `http://192.168.1.165/myworkoutlog`
 
 Si la configuración es correcta, MyWorkoutLog se mostrará en el navegador del teléfono igual que en el ordenador.
+
 
 
 
