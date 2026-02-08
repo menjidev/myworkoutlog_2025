@@ -8,7 +8,7 @@ El objetivo principal de este proyecto es desarrollar una aplicación web comple
 MyWorkoutLog que incorpore un sistema CRUD. Esta aplicación estará orientada al seguimiento y análisis del rendimiento en entrenamientos de fuerza. La aplicación permitirá a los usuarios registrar sus entrenamientos de forma personalizada, gestionar los datos de cada sesión (peso, repeticiones y series) y consultar métricas de progreso que reflejen su evolución a lo largo del tiempo. 
 
 ## Video de presentación
-
+<br>
 <p align="center">
   <a href="https://youtu.be/83oGZXK-xz0" target="_blank">
     <img src="public/img/screnshots/captura_video%20presentación.png" alt="Ver video de presentación en YouTube" width="360">
@@ -20,7 +20,7 @@ MyWorkoutLog que incorpore un sistema CRUD. Esta aplicación estará orientada a
 </p>
 
 ## Demo
-
+<br>
 <p align="center">
   <img src="public/img/screnshots/iPhone-14-(iOS-16)-localhost-oyefu4fyswtwc3.gif" alt="Demo (vertical)" width="180">
 </p>
@@ -116,6 +116,7 @@ Si solo quieres probar la aplicación, puedes usar un usuario de prueba que ya i
 
 - Correo: `maria@myworkoutlog.com`
 - Contraseña: `proyectodedaw`
+
 
 
 
