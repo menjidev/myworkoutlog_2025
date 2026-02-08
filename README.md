@@ -1,7 +1,7 @@
 # MyWorkoutLog - 2025
 
 MyWorkoutLog es una aplicación web que permite a los usuarios registrarse para poder progresar siguiendo patrones reales de entrenamiento y, al mismo tiempo, realizar un seguimiento detallado de sus rutinas. Esta aplicación ofrece la oportunidad de registrar las fechas de cada día de entrenamiento, los ejercicios realizados, así como los datos de cada serie (peso utilizado, número de series y repeticiones). Además, esta aplicación web incluye un sistema de métricas que permite evaluar el progreso del usuario y mejorar la planificación de sus entrenamientos. 
-<br>
+<br><br>
 <p align="center">
   <img src="public/img/screnshots/Myworkoutlog1.png" alt="Pantalla de inicio" width="700">
 </p>
@@ -122,6 +122,7 @@ Si solo quieres probar la aplicación, puedes usar un usuario de prueba que ya i
 ## Documentación
 
 - [Memoria del proyecto (PDF)](public/docs/DAW_Memoria_CristianMenjibar.pdf)
+
 
 
 
