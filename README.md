@@ -13,6 +13,10 @@ MyWorkoutLog que incorpore un sistema CRUD. Esta aplicación estará orientada a
   </a>
 </p>
 
+## Demo
+
+<img src="public/img/screnshots/demo.gif" alt="Demo">
+
 ## Requisitos
 
 - XAMPP (Apache y MySQL/MariaDB)
@@ -75,6 +79,7 @@ Para visualizar la aplicación en un teléfono móvil conectado a la misma red l
    - Ejemplo: `http://192.168.1.165/myworkoutlog`
 
 Si la configuración es correcta, MyWorkoutLog se mostrará en el navegador del teléfono igual que en el ordenador.
+
 
 
 
